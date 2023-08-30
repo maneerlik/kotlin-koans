@@ -8,12 +8,12 @@
 <a name="table-of-contents"></a>
 ### Table of Contents:
 1. [**Introduction**](#introduction)
-   - [Simple Functions](#simple-functions)
-   - [Named arguments](#named-arguments)
-   - [Default arguments](#default-arguments)
-   - [Triple-quoted strings](#triple-quoted-strings)
-   - [String templates](#string-templates)
-   - [Nullable types](#nullable-types)
+	- [Simple Functions](#simple-functions)
+	- [Named arguments](#named-arguments)
+	- [Default arguments](#default-arguments)
+	- [Triple-quoted strings](#triple-quoted-strings)
+	- [String templates](#string-templates)
+	- [Nullable types](#nullable-types)
 2. [**Classes**](#classes)
 </br>
 
