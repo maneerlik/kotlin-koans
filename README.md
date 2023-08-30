@@ -12,8 +12,8 @@
 	- [Named arguments](#named-arguments)
 	- [Default arguments](#default-arguments)
 	- [Triple-quoted strings](#triple-quoted-strings)
-    - [String templates](#string-templates)
-    - [Nullable types](#nullable-types) 
+   	- [String templates](#string-templates)
+  	- [Nullable types](#nullable-types) 
 - [**Classes**](#classes)
 	- [Null](#null)
 </br>
@@ -21,8 +21,8 @@
 <a name="introduction"></a>
 ## Introduction
 
-### :label: Simple Functions
 <a name="simple-functions"></a>
+### :label: Simple Functions
 Check out the <a href="https://kotlinlang.org/docs/basic-syntax.html#functions">function syntax</a> and change the code to make the function start return the string "OK".
 ```Kotlin
 fun start(): String = TODO()
@@ -36,9 +36,10 @@ fun start() = "OK"
 
 ##
 
-### :label: Named arguments
 <a name="named-arguments"></a>
+### :label: Named arguments
 Make the function `joinOptions()` return the list in a JSON format (for example, `[a, b, c]`) by specifying only two arguments.
+
 <a href="https://kotlinlang.org/docs/functions.html#default-arguments">Default and named</a> arguments help to minimize the number of overloads and improve the readability of the function invocation. The library function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html">`joinToString()`</a> is declared with default values for parameters:
 ```Kotlin
 fun joinToString(
@@ -58,8 +59,8 @@ fun joinOptions(options: Collection<String>) = options.joinToString(prefix = "["
 
 ##
 
-### :label: Default arguments
 <a name="default-arguments"></a>
+### :label: Default arguments
 Imagine you have several overloads of `foo()` in Java:
 ```Java
 public String foo(String name, int number, boolean toUpperCase) {
@@ -96,9 +97,13 @@ fun useFoo() = listOf(
 
 ##
 
-### :label: Triple-quoted strings
 <a name="triple-quoted-strings"></a>
-Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin. You can use the handy library functions <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html">`trimIndent()`</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html">`trimMargin()`</a> to format multiline triple-quoted strings in accordance with the surrounding code. Replace the `trimIndent` call with the `trimMargin` call taking `#` as the prefix value so that the resulting string doesn't contain the prefix character.
+### :label: Triple-quoted strings
+Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin. 
+
+You can use the handy library functions <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html">`trimIndent()`</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html">`trimMargin()`</a> to format multiline triple-quoted strings in accordance with the surrounding code. 
+
+Replace the `trimIndent` call with the `trimMargin` call taking `#` as the prefix value so that the resulting string doesn't contain the prefix character.
 ```Kotlin
 const val question = "life, the universe, and everything"
 const val answer = 42
@@ -129,9 +134,11 @@ fun main() {
 
 ##
 
+<a href="string-templates"></a>
 ### :label: String templates
-<a href="#string-templates"></a>
-Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash. The following pattern matches a date in the format `13.06.1992` (two digits, a dot, two digits, a dot, four digits):
+Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash. 
+
+The following pattern matches a date in the format `13.06.1992` (two digits, a dot, two digits, a dot, four digits):
 ```Kotlin
 fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 ```
@@ -152,8 +159,8 @@ fun getPattern() = """\d{2} $month \d{4}"""
 
 ##
 
-### :label: Nullable types
 <a href="#nullable-types"></a>
+### :label: Nullable types
 Learn about <a href="https://kotlinlang.org/docs/null-safety.html">null safety and safe calls</a> in Kotlin and rewrite the following Java code so that it only has one `if` expression:
 ```Java
 public void sendMessageToClient(@Nullable Client client, @Nullable String message, @NotNull Mailer mailer) {
@@ -191,5 +198,8 @@ interface Mailer {
 
 ##
 
-### :label: Null
+<a name="#classes"></a>
+## Classes
+
 <a href="#null"></a>
+### :label: Null
