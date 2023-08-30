@@ -7,19 +7,19 @@
 
 <a name="table-of-contents"></a>
 ### Table of Contents:
-1. [**Introduction**](#introduction)
+- [**Introduction**](#introduction)
 	- [Simple Functions](#simple-functions)
 	- [Named arguments](#named-arguments)
 	- [Default arguments](#default-arguments)
 	- [Triple-quoted strings](#triple-quoted-strings)
- 	- [String templates](#string-templates)
-  	- [Nullable types](#nullable-types) 
-2. [**Classes**](#classes)
+    - [String templates](#string-templates)
+    - [Nullable types](#nullable-types) 
+- [**Classes**](#classes)
 	- [Null](#null)
 </br>
 
 <a name="introduction"></a>
-## 1. Introduction
+## Introduction
 
 ### :label: Simple Functions
 <a name="simple-functions"></a>
@@ -39,7 +39,7 @@ fun start() = "OK"
 ### :label: Named arguments
 <a name="named-arguments"></a>
 Make the function `joinOptions()` return the list in a JSON format (for example, `[a, b, c]`) by specifying only two arguments.
-<a href="https://kotlinlang.org/docs/functions.html#default-arguments">Default and named</a> arguments help to minimize the number of overloads and improve the readability of the function invocation. The library function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html">`joinToString`</a> is declared with default values for parameters:
+<a href="https://kotlinlang.org/docs/functions.html#default-arguments">Default and named</a> arguments help to minimize the number of overloads and improve the readability of the function invocation. The library function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html">`joinToString()`</a> is declared with default values for parameters:
 ```Kotlin
 fun joinToString(
     separator: String = ", ",
@@ -60,7 +60,7 @@ fun joinOptions(options: Collection<String>) = options.joinToString(prefix = "["
 
 ### :label: Default arguments
 <a name="default-arguments"></a>
-Imagine you have several overloads of 'foo()' in Java:
+Imagine you have several overloads of `foo()` in Java:
 ```Java
 public String foo(String name, int number, boolean toUpperCase) {
     return (toUpperCase ? name.toUpperCase() : name) + number;
@@ -75,7 +75,7 @@ public String foo(String name) {
     return foo(name, 42);
 }
 ```
-You can replace all these Java overloads with one function in Kotlin. Change the declaration of the `foo` function in a way that makes the code using `foo` compile. Use <a href="https://kotlinlang.org/docs/functions.html#default-arguments">default and named</a> arguments.
+You can replace all these Java overloads with one function in Kotlin. Change the declaration of the `foo()` function in a way that makes the code using `foo()` compile. Use <a href="https://kotlinlang.org/docs/functions.html#default-arguments">default and named</a> arguments.
 * #### Solution
 ```Kotlin
 fun foo(
@@ -98,11 +98,7 @@ fun useFoo() = listOf(
 
 ### :label: Triple-quoted strings
 <a name="triple-quoted-strings"></a>
-Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin.
-
-You can use the handy library functions <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html">`trimIndent`</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html">`trimMargin`</a> to format multiline triple-quoted strings in accordance with the surrounding code.
-
-Replace the `trimIndent` call with the `trimMargin` call taking `#` as the prefix value so that the resulting string doesn't contain the prefix character.
+Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin. You can use the handy library functions <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html">`trimIndent()`</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html">`trimMargin()`</a> to format multiline triple-quoted strings in accordance with the surrounding code. Replace the `trimIndent` call with the `trimMargin` call taking `#` as the prefix value so that the resulting string doesn't contain the prefix character.
 ```Kotlin
 const val question = "life, the universe, and everything"
 const val answer = 42
@@ -135,10 +131,7 @@ fun main() {
 
 ### :label: String templates
 <a href="#string-templates"></a>
-Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash.
-
-The following pattern matches a date in the format `13.06.1992` (two digits, a dot, two digits, a dot, four digits):
-
+Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash. The following pattern matches a date in the format `13.06.1992` (two digits, a dot, two digits, a dot, four digits):
 ```Kotlin
 fun getPattern() = """\d{2}\.\d{2}\.\d{4}"""
 ```
