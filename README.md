@@ -7,14 +7,15 @@
 
 <a name="table-of-contents"></a>
 ### Table of Contents:
-1. [**Introduction**](<a name="introduction">)
-	- [Simple Functions](<a name="simple-functions">)
+1. [**Introduction**](#introduction)
+	- [Simple Functions](#simple-functions)
 	- [Named arguments](#named-arguments)
 	- [Default arguments](#default-arguments)
 	- [Triple-quoted strings](#triple-quoted-strings)
 	- [String templates](#string-templates)
 	- [Nullable types](#nullable-types)
 2. [**Classes**](#classes)
+	- [Null](#null)
 </br>
 
 <a name="introduction"></a>
@@ -196,3 +197,6 @@ interface Mailer {
 <p align="right"><a href="#table-of-contents">back to contents</a></p>
 
 ##
+
+### :label: Null
+<a href="#null"></a>
