@@ -7,18 +7,14 @@
 
 <a name="table-of-contents"></a>
 ### Table of Contents:
-1. [**Introduction**][1]
-	- [Simple Functions][1.1]
+1. [**Introduction**](<a name="introduction">)
+	- [Simple Functions](<a name="simple-functions">)
 	- [Named arguments](#named-arguments)
 	- [Default arguments](#default-arguments)
 	- [Triple-quoted strings](#triple-quoted-strings)
 	- [String templates](#string-templates)
 	- [Nullable types](#nullable-types)
 2. [**Classes**](#classes)
-
-[1]:<a name="introduction">
-[1.1]:<a name="simple-functions">
-
 </br>
 
 <a name="introduction"></a>
