@@ -13,7 +13,9 @@
 	- [Default arguments](#default-arguments)
 	- [Triple-quoted strings](#triple-quoted-strings)
    	- [String templates](#string-templates)
-  	- [Nullable types](#nullable-types) 
+  	- [Nullable types](#nullable-types)
+  	- [Nothing type](#nothing-type)
+  	- [Lambdas](#lambdas)
 - [**Classes**](#classes)
 	- [Null](#null)
 </br>
@@ -198,8 +200,65 @@ interface Mailer {
 
 ##
 
+<a name="nothing-type"></a>
+### Nothing type
+<a href="https://kotlinlang.org/docs/exceptions.html#the-nothing-type">Nothing type</a> can be used as a return type for a function that always throws an exception. When you call such a function, the compiler uses the information that the execution doesn't continue beyond the function.
+
+Specify Nothing return type for the failWithWrongAge function. Note that without the Nothing type, the checkAge function doesn't compile because the compiler assumes the age can be `null`.
+```Kotlin
+import java.lang.IllegalArgumentException
+
+fun failWithWrongAge(age: Int?) // GOTO {
+    throw IllegalArgumentException("Wrong age: $age")
+}
+
+fun checkAge(age: Int?) {
+    if (age == null || age !in 0..150) failWithWrongAge(age)
+    println("Congrats! Next year you'll be ${age + 1}.")
+}
+
+fun main() {
+    checkAge(10)
+}
+```
+* #### Solution
+```Kotlin
+import java.lang.IllegalArgumentException
+
+fun failWithWrongAge(age: Int?): Nothing {
+    throw IllegalArgumentException("Wrong age: $age")
+}
+
+fun checkAge(age: Int?) {
+    if (age == null || age !in 0..150) failWithWrongAge(age)
+    println("Congrats! Next year you'll be ${age + 1}.")
+}
+
+fun main() {
+    checkAge(10)
+}
+```
+</br>
+<p align="right"><a href="#table-of-contents">back to contents</a></p>
+
+##
+
+<a name="lambdas"></a>
+### Lambdas
+Kotlin supports functional programming. Learn about <a href="https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions">lambdas</a> in Kotlin.
+
+Pass a lambda to the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html">`any()`</a> function to check if the collection contains an even number. The any function gets a predicate as an argument and returns true if at least one element satisfies the predicate.
+```Kotlin
+fun containsEven(collection: Collection<Int>): Boolean = collection.any { TODO() }
+```
+* #### Solution
+```Kotlin
+fun containsEven(collection: Collection<Int>): Boolean = collection.any { it % 2 == 0 }
+```
+</br>
+<p align="right"><a href="#table-of-contents">back to contents</a></p>
+
+##
+
 <a name="#classes"></a>
 ## Classes
-
-<a href="#null"></a>
-### Null
