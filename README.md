@@ -1,27 +1,21 @@
 <a name="readme-top"></a>
 <div align="center">
-   <h3 align="center">Kotlin Koans</h3>
-   <p align="center"> Solution for 'Kotlin Koans' course from JetBrains s.r.o.</p>
+   <h1 align="center">
+		<img src="https://github.com/devicons/devicon/blob/master/icons/kotlin/kotlin-original.svg" title="Kotlin" alt="Kotlin" width="26" height="26"/>otlin Koans
+   </h1>
+   <p align="center"><i>Solution for 'Kotlin Koans' course from JetBrains s.r.o.</i></p>
 </div>
 
-<details>
-  <summary>contents</summary>
-  <ol>
-    <!-- first part  -->
-    <li><a href="#introduction">Introduction</a>
-        <ul>
-            <li><a href="#simple-functions">Simple Functions</a></li>
-            <li><a href="#named-arguments">Named arguments</a></li>
-            <li><a href="#default-arguments">Default arguments</a></li>
-            <li><a href="#triple-quoted-strings">Triple-quoted strings</a></li>
-            <li><a href="#string-templates">String templates</a></li>
-        </ul>
-    </li>
-    <!-- second part  -->
-    <li><a href="#classes">Classes</a>
-    </li>
-  </ol>
-</details>
+### Table of Contents:
+<!-- first part  -->
+- [Introduction](#introduction)
+   - [Simple Functions](#simple-functions)
+   - [Named arguments](#named-arguments)
+   - [Default arguments](#default-arguments)
+   - [Triple-quoted strings](#triple-quoted-strings)
+   - [String templates](#string-templates)
+<!-- second part  -->
+- [Classes](#classes)
 
 <a name="introduction"></a>
 ## Introduction
