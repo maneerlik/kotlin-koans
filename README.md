@@ -17,7 +17,7 @@
   	- [Nothing type](#nothing-type)
   	- [Lambdas](#lambdas)
 - [**Classes**](#classes)
-	- [Null](#null)
+	- [Data classes](#data-classes)
 </br>
 
 <a name="introduction"></a>
@@ -262,3 +262,42 @@ fun containsEven(collection: Collection<Int>): Boolean = collection.any { it % 2
 
 <a name="#classes"></a>
 ## Classes
+
+<a name="data-classes"></a>
+### Data classes
+Learn about <a href="https://kotlinlang.org/docs/classes.html">classes</a>, <a href="https://kotlinlang.org/docs/properties.html">properties</a> and <a href="https://kotlinlang.org/docs/data-classes.html">data classes</a> and then rewrite the following Java code to Kotlin:
+```Java
+public class Person {
+    private final String name;
+    private final int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+```
+* #### Solution
+```Kotlin
+data class Person(val name: String, val age: Int)
+
+fun getPeople(): List<Person> {
+    return listOf(Person("Alice", 29), Person("Bob", 31))
+}
+
+fun comparePeople(): Boolean {
+    val p1 = Person("Alice", 29)
+    val p2 = Person("Alice", 29)
+    return p1 == p2  // should be true
+}
+```
+</br>
+<p align="right"><a href="#table-of-contents">back to contents</a></p>
