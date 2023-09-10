@@ -25,7 +25,7 @@
 
 <a name="simple-functions"></a>
 ### Simple Functions
-Check out the <a href="https://kotlinlang.org/docs/basic-syntax.html#functions">function syntax</a> and change the code to make the function start return the string "OK".
+:label: Check out the <a href="https://kotlinlang.org/docs/basic-syntax.html#functions">function syntax</a> and change the code to make the function start return the string "OK".
 ```Kotlin
 fun start(): String = TODO()
 ```
@@ -40,7 +40,7 @@ fun start() = "OK"
 
 <a name="named-arguments"></a>
 ### Named arguments
-Make the function `joinOptions()` return the list in a JSON format (for example, `[a, b, c]`) by specifying only two arguments.
+:label: Make the function `joinOptions()` return the list in a JSON format (for example, `[a, b, c]`) by specifying only two arguments.
 
 <a href="https://kotlinlang.org/docs/functions.html#default-arguments">Default and named</a> arguments help to minimize the number of overloads and improve the readability of the function invocation. The library function <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/join-to-string.html">`joinToString()`</a> is declared with default values for parameters:
 ```Kotlin
@@ -63,7 +63,7 @@ fun joinOptions(options: Collection<String>) = options.joinToString(prefix = "["
 
 <a name="default-arguments"></a>
 ### Default arguments
-Imagine you have several overloads of `foo()` in Java:
+:label: Imagine you have several overloads of `foo()` in Java:
 ```Java
 public String foo(String name, int number, boolean toUpperCase) {
     return (toUpperCase ? name.toUpperCase() : name) + number;
@@ -101,7 +101,7 @@ fun useFoo() = listOf(
 
 <a name="triple-quoted-strings"></a>
 ### Triple-quoted strings
-Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin. 
+:label: Learn about the <a href="https://kotlinlang.org/docs/strings.html#string-literals">different string literals and string templates</a> in Kotlin. 
 
 You can use the handy library functions <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-indent.html">`trimIndent()`</a> and <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.text/trim-margin.html">`trimMargin()`</a> to format multiline triple-quoted strings in accordance with the surrounding code. 
 
@@ -138,7 +138,7 @@ fun main() {
 
 <a href="string-templates"></a>
 ### String templates
-Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash. 
+:label: Triple-quoted strings are not only useful for multiline strings but also for creating regex patterns as you don't need to escape a backslash with a backslash. 
 
 The following pattern matches a date in the format `13.06.1992` (two digits, a dot, two digits, a dot, four digits):
 ```Kotlin
@@ -163,7 +163,7 @@ fun getPattern() = """\d{2} $month \d{4}"""
 
 <a href="#nullable-types"></a>
 ### Nullable types
-Learn about <a href="https://kotlinlang.org/docs/null-safety.html">null safety and safe calls</a> in Kotlin and rewrite the following Java code so that it only has one `if` expression:
+:label: Learn about <a href="https://kotlinlang.org/docs/null-safety.html">null safety and safe calls</a> in Kotlin and rewrite the following Java code so that it only has one `if` expression:
 ```Java
 public void sendMessageToClient(@Nullable Client client, @Nullable String message, @NotNull Mailer mailer) {
     if (client == null || message == null) return;
@@ -202,7 +202,7 @@ interface Mailer {
 
 <a name="nothing-type"></a>
 ### Nothing type
-<a href="https://kotlinlang.org/docs/exceptions.html#the-nothing-type">Nothing type</a> can be used as a return type for a function that always throws an exception. When you call such a function, the compiler uses the information that the execution doesn't continue beyond the function.
+:label: <a href="https://kotlinlang.org/docs/exceptions.html#the-nothing-type">Nothing type</a> can be used as a return type for a function that always throws an exception. When you call such a function, the compiler uses the information that the execution doesn't continue beyond the function.
 
 Specify Nothing return type for the failWithWrongAge function. Note that without the Nothing type, the checkAge function doesn't compile because the compiler assumes the age can be `null`.
 ```Kotlin
@@ -245,7 +245,7 @@ fun main() {
 
 <a name="lambdas"></a>
 ### Lambdas
-Kotlin supports functional programming. Learn about <a href="https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions">lambdas</a> in Kotlin.
+:label: Kotlin supports functional programming. Learn about <a href="https://kotlinlang.org/docs/lambdas.html#lambda-expressions-and-anonymous-functions">lambdas</a> in Kotlin.
 
 Pass a lambda to the <a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.collections/any.html">`any()`</a> function to check if the collection contains an even number. The any function gets a predicate as an argument and returns true if at least one element satisfies the predicate.
 ```Kotlin
@@ -265,7 +265,7 @@ fun containsEven(collection: Collection<Int>): Boolean = collection.any { it % 2
 
 <a name="data-classes"></a>
 ### Data classes
-Learn about <a href="https://kotlinlang.org/docs/classes.html">classes</a>, <a href="https://kotlinlang.org/docs/properties.html">properties</a> and <a href="https://kotlinlang.org/docs/data-classes.html">data classes</a> and then rewrite the following Java code to Kotlin:
+:label: Learn about <a href="https://kotlinlang.org/docs/classes.html">classes</a>, <a href="https://kotlinlang.org/docs/properties.html">properties</a> and <a href="https://kotlinlang.org/docs/data-classes.html">data classes</a> and then rewrite the following Java code to Kotlin:
 ```Java
 public class Person {
     private final String name;
